@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Examples</title>
+</head>
+<body>
+    <button id="showMessageButton" onclick="enterMessage()">Show Message</button>
+    <button id="getUserInputButton" onclick="getUserInput()">Get User Input</button>
+
+    <script>
+        var showMessageButton = document.getElementById("showMessageButton");
+       
+       function enterMessage() {
+            var message = "Hello JavaScript";
+            alert(message);
+        }
+        showMessageButton.addEventListener("click", enterMessage);
+
+        var getUserInputButton = document.getElementById("getUserInputButton");
+         function getUserInput() {
+            var userInput = prompt("Enter something:");
+            if (userInput !== null) {
+                alert("You entered: " + userInput);
+            }
+        }
+       getUserInputButton.addEventListener("click", getUserInput);
+    </script>
+</body>
+</html>

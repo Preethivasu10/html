@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <input type="" id="integerInput" placeholder="Enter an integer">
+    <button onclick="myfunction()">submit</button>
+    <select id="selectBox"></select>
+    
+    <script>
+        function myfunction() {
+            var data = document.getElementById("integerInput").value;
+            var displayoutput = '<option>select option</option>';
+            for (var i = 0; i <= data; i++) {
+                displayoutput += '<option value="' + i + '">' + i + '</option>';
+            }
+
+            document.getElementById("selectBox").innerHTML = displayoutput;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form>
+        <input type="text" id="name" placeholder="First Name"><br>
+        <input type="text" id="name2" placeholder="Last Name"><br>
+        <button onclick="login(event)">Login</button>
+        <button onclick="signup()">Signup</button>
+    </form>
+    <script>
+        function login(event) {
+            event.preventDefault();
+
+            const firstName = document.getElementById("name").value;
+            const lastName = document.getElementById("name2").value;
+
+          
+            localStorage.setItem("fName", firstName);
+            localStorage.setItem("lName", lastName);
+
+            
+            window.location.href = "json3.html";
+        }
+    </script>
+</body>
+</html>

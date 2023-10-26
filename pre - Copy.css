@@ -1,0 +1,126 @@
+body {
+    background-color:rgb(214, 30, 30);
+}
+:root {
+    --white-color: #fff;
+    --bg-color: #fff;
+    --gray-color: #ccc;
+  }
+  
+ 
+  body {
+    background: var(--bg-color) !important;
+  }
+  
+  
+  .nav-item .nav-link {
+    color: var(--white-color);
+  }
+  
+ 
+  .hero {
+    height: 100vh;
+    background-image: url("https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg");
+    background-repeat: no-repeat;
+    background-position: 60% 0%;
+    
+    background-size: cover;
+    background-attachment: fixed;
+  }
+ .preethi{
+    position: absolute;
+    left: 30px;
+    
+
+
+  }
+  .preethii{
+    position: absolute;
+    left: 30px;
+    bottom: 60px;
+  }
+  
+  
+  #skills i {
+    height: 100px;
+    width: 100px;
+  }
+  
+  #portfolio img {
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  #about .img,
+  #about img,
+  .hire-text h2 {
+    position: relative;
+  }
+  
+ 
+  #about .img::before {
+    content: "";
+    left: 50%;
+    width: 4px;
+    position: absolute;
+    height: calc(100% + 140px);
+    background: var(--gray-color);
+  }
+  
+  #about img,
+  #about .hire-text h2 {
+    width: 140px;
+  }
+  
+  #about .hire-text h2 {
+    height: 140px;
+  }
+  
+  .social-icons a{
+    width: 40px;
+    height: 40px;
+   
+   
+  }
+  
+  footer .social-icons a {
+    width: 30px;
+    height: 30px;
+  }
+  
+  #cv img {
+    width: 230px;
+  }
+  
+.hover-shadow:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-5px);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+  
+ 
+  #contact {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url("");
+  }
+  
+  @media screen and (max-width: 990px) {
+    #skills .card {
+      width: calc(100% / 2 - 10px) !important;
+    }
+  }
+  
+  @media screen and (max-width: 668px) {
+    #skills .card,
+    #portfolio .card-wrapper {
+      width: 100% !important;
+    }
+   #about .hire-text h2 {
+     height: 70px;
+     width: 70px;
+   }
+  }
+  

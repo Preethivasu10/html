@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Creation</title>
+</head>
+<body>
+    <form>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" required>
+        <br>
+        <button type="button" onclick="validatePasswords()">Submit</button>
+    </form>
+
+    <script>
+        function validatePasswords() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password === confirmPassword) {
+                alert("Passwords match!");
+            } else {
+                alert("Passwords do not match. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function createinput(){
+const divElement = document.createElement('div');
+const textNode = document.createTextNode('Login Page');
+const inputElement = document.createElement('input');
+inputElement.type = 'text';
+const buttonElement = document.createElement('button');
+const buttonText = document.createTextNode('Click');
+buttonElement.appendChild(buttonText);
+divElement.appendChild(textNode);
+divElement.appendChild(inputElement);
+divElement.appendChild(buttonElement);
+document.body.appendChild(divElement);
+    }
+ createinput();
+
+</script>
+</body>
+</html>

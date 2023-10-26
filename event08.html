@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boxes</title>
+</head>
+<body>
+    <input type="number" id="integerInput" placeholder="Enter an integer">
+    <button onclick="generateOptions()">Submit</button>
+    <select id="selectBox1" onchange="Box()"></select>
+    <select id="selectBox2"></select>
+
+    <script>
+        function generateOptions() {
+            var data = (document.getElementById("integerInput").value);
+            var displayoutput = '<option>select option</option>';
+            for (var i = 0; i <= data; i++) {
+                selectBox1.innerHTML += '<option value="' + i + '">' + i + '</option>';
+            }
+        }
+        document.getElementById("selectBox1").innerHTML = displayoutput;
+
+        function Box() {
+            var selectedValue = (document.getElementById("selectBox1").value);
+            var displayoutput = '<option>select option</option>';
+            for (var i = 0; i <= selectedValue; i++) {
+                selectBox2.innerHTML += '<option value="' + i + '">' + i + '</option>';
+            }
+        }
+        document.getElementById("selectBox2").innerHTML = displayoutput;
+    </script>
+</body>
+</html>

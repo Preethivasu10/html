@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flatten Array</title>
+</head>
+<body>
+    <h1>Flatten Array </h1>
+    
+    <div id="output"></div>
+
+    <script>
+        const flatten = (arrays) => {
+const flat = [];
+for (const array of arrays) {
+flat.push(...array);
+}
+return [flat];
+};
+
+const nestedArrays = [[10, 80, 90], [60, 70, 30], [20, 100]];
+const flatResult = flatten(nestedArrays);
+console.log(flatResult); 
+</script>
+    </script>
+</body>
+</html>

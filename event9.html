@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Form Generation</title>
+</head>
+<body>
+    <input type="number" id="integerInput" placeholder="Enter an integer">
+    <button onclick="generateOptions()">Submit</button>
+    <select id="selectBox1" onchange="generateForm()"></select>
+    <div id="dynamicForm"></div>
+
+    <script>
+        function generateOptions() {
+            var data = parseInt(document.getElementById("integerInput").value);
+            var selectBox1 = document.getElementById("selectBox1");
+            selectBox1.innerHTML = '<option>select option</option>';
+            for (var i = 0; i <= data; i++) {
+                selectBox1.innerHTML += '<option value="' + i + '">' + i + '</option>';
+            }
+        }
+
+        function generateForm() {
+            var selectedValue = parseInt(document.getElementById("selectBox1").value);
+            var dynamicForm = document.getElementById("dynamicForm");
+            var formContent = '';
+            
+            for (var i = 0; i < selectedValue; i++) {
+                formContent += `
+                    <form>
+                        username <input type="text" id="username${i}" name="username${i}"><br><br>
+                        password <input type="password" id="password${i}" name="password${i}"><br><br>
+                    </form>
+                `;
+            }
+            
+            dynamicForm.innerHTML = selectedValue > 0 ? formContent : '';
+        }
+            
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <input type="text" id="firstName"><br>
+    <input type="text" id="lastName"><br>
+    <button onclick="login()">Login</button>
+    <button onclick="signup()">Signup</button>
+    <p id="welcomeMessage"></p>
+    <script>
+        function login() {
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            localStorage.setItem("fName", firstName);
+            localStorage.setItem("lName", lastName);
+            displayWelcomeMessage();
+        }
+
+        function displayWelcomeMessage() {
+            const firstName = localStorage.getItem("fName");
+            const lastName = localStorage.getItem("lName");
+            document.getElementById("welcomeMessage").textContent = "Welcome Back " + firstName + " " + lastName + "...!";
+        }
+    </script>
+</body>
+</html>

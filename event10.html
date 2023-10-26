@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Generator</title>
+</head>
+<body>
+
+    <input type="text" id="name" placeholder="Enter your name">
+    <input type="date" id="dob">
+    <button onclick="generatePassword()">Generate Password</button>
+    <p id="generatedPassword"></p>
+
+    <script>
+        
+        function generatePassword() {
+            var name = document.getElementById("name").value;
+            var dob = document.getElementById("dob").value;
+            var firstFourLetters = name.substring(0, 4);
+            var datePart = dob.split('-')[2]; 
+            var password = firstFourLetters + datePart;
+            document.getElementById("generatedPassword").textContent = "Generated password: "+ password;
+        }
+    </script>
+
+</body>
+</html>

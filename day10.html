@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Replace Content Example</title>
+</head>
+
+<body>
+    <button type="button" onclick="myFunction()" value="replace" name="replace">Replace </button>
+    <img src="https://th-thumbnailer.cdn-si-edu.com/OpD4gl6-sdJo2vtN4s_JQ7HBpqY=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/d0/74/d074bf4a-6fa2-4e41-bd38-8ddc33936f97/an-elephant-running-in-the-masai-mara-kenya.jpg" alt="" id="myDiv">
+
+    <script>
+        function myFunction() {
+            var originalDiv = document.getElementById("myDiv");
+            var newContent = document.createElement("img");
+            newContent.src = "https://images.pexels.com/photos/2071882/pexels-photo-2071882.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+            newContent.style.width = "1000px";
+            newContent.style.height = "750px"; 
+            originalDiv.parentNode.replaceChild(newContent, originalDiv);
+        }
+    </script>
+</body>
+</html>

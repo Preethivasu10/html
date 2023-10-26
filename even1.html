@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Example</title>
+</head>
+<body>
+    <h1>Select a Value:</h1>
+    <select id="dropdown">
+        <option value="default">Select an option</option>
+        <option value="value1">Value 1</option>
+        <option value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+    </select>
+    
+    <h2>Previous Values:</h2>
+    <div id="previousValues"></div>
+
+    <script>
+      const dropdown = document.getElementById('dropdown');
+      const previousValuesDiv = document.getElementById('previousValues');
+      let previousValuesList = [];
+  
+      dropdown.addEventListener('change', function() {
+          const selectedValue = dropdown.value;
+  
+          if (selectedValue !== 'default') {
+              previousValuesList.push(selectedValue);
+              updatePreviousValuesList();
+          }
+  
+          
+          dropdown.value = 'default';
+      });
+  
+      function updatePreviousValuesList() {
+          previousValuesDiv.innerHTML = '';
+          previousValuesList.forEach(value => {
+              const valueDiv = document.createElement('div');
+              valueDiv.textContent = value;
+              previousValuesDiv.appendChild(valueDiv);
+          });
+      }
+  </script>
+  
+</body>
+</html>

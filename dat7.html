@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #number{
+            width: 300px;
+            height: 50px;
+            
+        }
+        .box{
+            position: relative;
+            left: 450px;
+            top: 200px;
+            font-size: 20PX;
+            
+        }
+        body{
+            background-color: gainsboro;
+            position: absolute;
+            
+            
+        }
+        .button{
+            width: 100px;
+            height: 50px;
+        }
+        .image1{
+            width: 100px;
+            height: 110px;
+            position: relative;
+           left: 500px;
+           bottom: 170px;
+          
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>SQUARE CACULATOR</h1>
+    <form name="form1">
+        Enter a number: <input type="text" id="number" name="name"><br>
+        <input type="button" onclick="printvalue()" value="submit" class="button"><br>
+        <img src="https://t3.ftcdn.net/jpg/04/09/75/42/360_F_409754256_pszO3hqIY2Yt4EwURCdsBaPBqMmHo5vT.jpg" alt="" class="image1">
+        
+    </form>
+    
+    <script>
+        function printvalue() {
+            var number = (document.getElementById("number").value);
+            var area = number * number;
+            alert("The area of the square is: " + area);
+        }
+    </script>
+    </div>
+</body>
+</html>

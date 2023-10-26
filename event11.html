@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Manipulation</title>
+</head>
+<body>
+  <label for="inputDate">Enter a date:</label>
+  <input type="date" id="inputDate">
+  <button onclick="displayDates()">Display Dates</button>
+
+  <h2>Dates:</h2>
+  <label>+5 days from the input date:</label>
+  <input type="text" id="plusFiveInput" >
+  <br>
+  <label>-5 days from the input date:</label>
+  <input type="text" id="minusFiveInput" >
+
+  <script>
+    function displayDates() {
+      const inputDate = new Date(document.getElementById("inputDate").value);
+      const plusFiveDays = new Date(inputDate);
+      plusFiveDays.setDate(plusFiveDays.getDate() + 5);
+      const minusFiveDays = new Date(inputDate);
+      minusFiveDays.setDate(minusFiveDays.getDate() - 5);
+
+      document.getElementById("plusFiveInput").value = plusFiveDays.toDateString();
+      document.getElementById("minusFiveInput").value = minusFiveDays.toDateString();
+    }
+  </script>
+</body>
+</html>
+

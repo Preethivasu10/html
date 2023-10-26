@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <input type="text" id="cartItemTextInput" placeholder="Enter item">
+            <button id="addBtn" onclick="addItem()">Add to Cart</button>
+        </div>
+        <h1>TODO LIST</h1>
+        <ul id="cartItemList" class="cart-list">
+           
+        </ul>
+    </div>
+    
+    <script>
+        function addItem() {
+    const cartItemTextInput = document.getElementById("cartItemTextInput");
+    const cartItemList = document.getElementById("cartItemList");
+    const inputValue = cartItemTextInput.value.trim();
+
+    const listItem = document.createElement("li");
+    listItem.textContent = inputValue;
+    cartItemList.appendChild(listItem);
+    cartItemTextInput.value ="";
+}
+
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

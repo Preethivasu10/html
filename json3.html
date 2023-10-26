@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Data</title>
+</head>
+<body>
+    <h1>Display Data</h1>
+    <p id="display"></p>
+    <script>
+        
+        const firstName = localStorage.getItem("fName");
+        const lastName = localStorage.getItem("lName");
+
+     
+        const displayElement = document.getElementById("display");
+        if (firstName && lastName) {
+            displayElement.textContent = "Welcome Back " + firstName + " " + lastName + " ...!";
+        } else {
+            displayElement.textContent = "No data found.";
+        }
+    </script>
+</body>
+</html>

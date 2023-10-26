@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <input type="number" id="integerInput" placeholder="Enter an integer">
+    <button id="addButton">Add to Select Box</button>
+    <select id="selectBox"></select>
+
+    <script>
+        document.getElementById("addButton").addEventListener("click", function() {
+            var input = document.getElementById("integerInput").value;
+            var intValue = parseInt(input);
+
+            if ((intValue) && Number.isInteger(intValue)) {
+                var selectBox = document.getElementById("selectBox");
+                 selectBox.innerHTML = '';
+
+                for (var i = 0; i <= intValue; i++) {
+                    var option = document.createElement("option");
+                    option.text = i;
+                    selectBox.appendChild(option);
+                }
+
+                document.getElementById("integerInput").value = "";
+            }
+        });
+
+
+    </script>
+</body>
+</html>
